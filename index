@@ -1,4 +1,8 @@
-``html
+Aquí tienes el código completo del archivo **`index.html`** con los enlaces internos corregidos. He configurado cada tarjeta para que apunte exactamente a los nombres de los otros archivos HTML que tienes subidos en tu raíz (`PM2.5 Evolution in Bogota.html`, `PM2.5 in Bogota.html`, etc.). Además, agregué un pequeño botón elegante en cada sección para que los visitantes puedan abrir el informe completo en una pestaña nueva.
+
+Solo debes copiar este código, ponérselo a tu archivo (asegurándote de renombrarlo a **`index.html`** con la extensión) y hacer el commit:
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -110,6 +114,23 @@
             display: inline-block;
         }
 
+        .btn-link {
+            display: inline-block;
+            align-self: flex-start;
+            background-color: var(--primary-blue);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .btn-link:hover {
+            background-color: var(--accent-blue);
+        }
+
         .author-footer {
             text-align: center;
             margin-top: 60px;
@@ -139,6 +160,7 @@
                     <h3>1. Evolución de PM2.5 (Bogotá 2024)</h3>
                     <p>Monitoreo y seguimiento continuo de las concentraciones de PM2.5 a lo largo del año 2024. Identificación de picos críticos de contaminación, análisis estacionales y evaluación de alertas ambientales bajo normativas locales vigentes.</p>
                 </div>
+                <a href="./PM2.5 Evolution in Bogota.html" target="_blank" class="btn-link">Ver Análisis Completo →</a>
             </div>
 
             <div class="card">
@@ -150,6 +172,7 @@
                     <h3>2. Análisis Consolidado de PM2.5</h3>
                     <p>Core del pipeline de datos enfocado en la limpieza, reestructuración y tratamiento de series de tiempo históricas de PM2.5 en la capital. Cálculo de macro-estadísticos descriptivos y optimización de calidad de datos ambientales.</p>
                 </div>
+                <a href="./PM2.5 in Bogota.html" target="_blank" class="btn-link">Ver Análisis Completo →</a>
             </div>
 
             <div class="card">
@@ -161,6 +184,7 @@
                     <h3>3. Ranking de Estaciones: Top & Bottom</h3>
                     <p>Análisis comparativo de la carga contaminante registrada por las estaciones del IDEAM. Clasificación algorítmica para determinar los puntos críticos (hot spots) de polución estructural versus las zonas con mejores índices de aire puro.</p>
                 </div>
+                <a href="./Station report in Bogota.html" target="_blank" class="btn-link">Ver Análisis Completo →</a>
             </div>
 
             <div class="card">
@@ -172,14 +196,17 @@
                     <h3>4. Dinámica Cruzada: PM2.5 vs. PM10</h3>
                     <p>Estudio de correlación estadística y distribuciones numéricas entre las fracciones fina (PM2.5) y gruesa (PM10) del material particulado. Modelado de dispersión para entender fuentes de emisión comunes y dinámicas de suspensión.</p>
                 </div>
+                <a href="./PM2.5 vs PM10 in Bogota.html" target="_blank" class="btn-link">Ver Análisis Completo →</a>
             </div>
 
         </div>
     </div>
 
     <div class="author-footer">
-        Desarrollado por <strong>María Jimena Castaño Albarracín</strong> | Estudiante de Ciencia de Datos
+        Desarrollado por <strong>María Jimena Castaño Albarracín</strong> | [cite_start]Estudiante de Ciencia de Datos [cite: 117]
     </div>
 
 </body>
 </html>
+
+```
