@@ -1,0 +1,185 @@
+``html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bogotá Air Quality Analytics Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #f9fafb;
+            --card-bg: #ffffff;
+            --text-main: #111827;
+            --text-muted: #4b5563;
+            --primary-blue: #1e3a8a;
+            --accent-blue: #3b82f6;
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            font-weight: 800;
+        }
+
+        header p {
+            margin: 10px 0 0 0;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 24px;
+        }
+
+        @media (max-width: 500px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h3 {
+            margin: 0 0 12px 0;
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+        }
+
+        .card p {
+            margin: 0 0 20px 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        .badge-container {
+            margin-bottom: 15px;
+        }
+
+        .badge {
+            background-color: #eff6ff;
+            color: var(--accent-blue);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 6px;
+            display: inline-block;
+        }
+
+        .author-footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bogotá Air Quality Data Science Portfolio</h1>
+        <p>Unificación de análisis estadísticos y geoespaciales sobre material particulado (PM2.5 y PM10) en la red de monitoreo urbano.</p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            
+            <div class="card">
+                <div>
+                    <div class="badge-container">
+                        <span class="badge">Python</span>
+                        <span class="badge">Análisis Temporal</span>
+                    </div>
+                    <h3>1. Evolución de PM2.5 (Bogotá 2024)</h3>
+                    <p>Monitoreo y seguimiento continuo de las concentraciones de PM2.5 a lo largo del año 2024. Identificación de picos críticos de contaminación, análisis estacionales y evaluación de alertas ambientales bajo normativas locales vigentes.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="badge-container">
+                        <span class="badge">Pandas</span>
+                        <span class="badge">Data Wrangling</span>
+                    </div>
+                    <h3>2. Análisis Consolidado de PM2.5</h3>
+                    <p>Core del pipeline de datos enfocado en la limpieza, reestructuración y tratamiento de series de tiempo históricas de PM2.5 en la capital. Cálculo de macro-estadísticos descriptivos y optimización de calidad de datos ambientales.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="badge-container">
+                        <span class="badge">IDEAM</span>
+                        <span class="badge">Estadística Descriptiva</span>
+                    </div>
+                    <h3>3. Ranking de Estaciones: Top & Bottom</h3>
+                    <p>Análisis comparativo de la carga contaminante registrada por las estaciones del IDEAM. Clasificación algorítmica para determinar los puntos críticos (hot spots) de polución estructural versus las zonas con mejores índices de aire puro.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="badge-container">
+                        <span class="badge">Seaborn</span>
+                        <span class="badge">Modelado Estadístico</span>
+                    </div>
+                    <h3>4. Dinámica Cruzada: PM2.5 vs. PM10</h3>
+                    <p>Estudio de correlación estadística y distribuciones numéricas entre las fracciones fina (PM2.5) y gruesa (PM10) del material particulado. Modelado de dispersión para entender fuentes de emisión comunes y dinámicas de suspensión.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="author-footer">
+        Desarrollado por <strong>María Jimena Castaño Albarracín</strong> | Estudiante de Ciencia de Datos
+    </div>
+
+</body>
+</html>
